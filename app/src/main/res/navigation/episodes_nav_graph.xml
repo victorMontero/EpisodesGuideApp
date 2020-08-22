@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/episodes_nav_graph"
+    app:startDestination="@id/episodesFragment">
+
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.android.episodesguideapp.ui.fragments.EpisodesFragment"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" >
+        <action
+            android:id="@+id/action_episodesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.android.episodesguideapp.ui.fragments.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.android.episodesguideapp.ui.fragments.DetailsFragment"
+        android:label="DetailsFragment" />
+</navigation>

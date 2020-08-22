@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/episodesFragment"
+        android:icon="@drawable/ic_launcher_background"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="episodes"/>
+
+
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/ic_launcher_background"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="favorites"/>
+
+</menu>
