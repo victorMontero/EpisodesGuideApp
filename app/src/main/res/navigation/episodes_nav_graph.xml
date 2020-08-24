@@ -34,5 +34,9 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.android.episodesguideapp.ui.fragments.DetailsFragment"
-        android:label="DetailsFragment" />
+        android:label="DetailsFragment" >
+        <argument
+            android:name="episode"
+            app:argType="com.android.episodesguideapp.models.Episode" />
+    </fragment>
 </navigation>

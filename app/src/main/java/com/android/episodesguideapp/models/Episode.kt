@@ -3,6 +3,7 @@ package com.android.episodesguideapp.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(
     tableName = "episodes"
@@ -20,4 +21,4 @@ data class Episode(
     val season: Int,
     val summary: String,
     val url: String
-)
+) : Serializable

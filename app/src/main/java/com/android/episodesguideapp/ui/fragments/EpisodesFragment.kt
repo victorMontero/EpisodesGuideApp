@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.episodesguideapp.R
 import com.android.episodesguideapp.adapters.EpisodeAdapter
@@ -25,6 +26,16 @@ class EpisodesFragment : Fragment(R.layout.fragment_episodes) {
         viewModel = (activity as MainActivity).viewModel
 
         setupRecyclerView()
+
+        episodeAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("episode", it)
+            }
+            findNavController().navigate(
+                R.id.action_episodesFragment_to_detailsFragment,
+                bundle
+            )
+        }
 
         viewModel.episodes.observe(viewLifecycleOwner, Observer {response ->
             when(response){

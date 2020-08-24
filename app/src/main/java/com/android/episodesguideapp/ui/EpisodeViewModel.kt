@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class EpisodeViewModel(
-    val episodeRepository : EpisodeRepository
+    val episodeRepository: EpisodeRepository
 ) : ViewModel() {
 
     val episodes: MutableLiveData<Resource<EpisodeResponse>> = MutableLiveData()
@@ -26,9 +26,9 @@ class EpisodeViewModel(
 
     }
 
-    private fun handleEpisodeResponse(response: Response<EpisodeResponse>) : Resource<EpisodeResponse>{
-        if(response.isSuccessful){
-            response.body()?.let {resultResponse ->
+    private fun handleEpisodeResponse(response: Response<EpisodeResponse>): Resource<EpisodeResponse> {
+        if (response.isSuccessful) {
+            response.body()?.let { resultResponse ->
                 return Resource.Success(resultResponse)
             }
         }
