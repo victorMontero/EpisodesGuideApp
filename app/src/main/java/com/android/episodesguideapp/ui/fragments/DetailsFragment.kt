@@ -10,7 +10,9 @@ import com.android.episodesguideapp.R
 import com.android.episodesguideapp.models.Episode
 import com.android.episodesguideapp.ui.EpisodeViewModel
 import com.android.episodesguideapp.ui.MainActivity
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_details.*
+import kotlinx.android.synthetic.main.fragment_episodes.*
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 
@@ -27,8 +29,13 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             loadUrl(episode.url)
         }
 
-//        fab_to_favorite_episodes.setOnClickListener {
-//            viewModel.sav
-//        }
+        fab_to_favorite_episodes.setOnClickListener {
+            viewModel.saveEpisode(episode)
+            Snackbar.make(view, "episode saved by ricky", Snackbar.LENGTH_SHORT).show()
+        }
     }
+
+
+
+
 }

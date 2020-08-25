@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val episodeRepository = EpisodeRepository(EpisodeDatabase(this))
-        val viewModelProviderFactory = EpisodeViewModelProviderFactory(episodeRepository)
+        val viewModelProviderFactory = EpisodeViewModelProviderFactory(application, episodeRepository)
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(EpisodeViewModel::class.java)
 
         bottom_navigation_view.setupWithNavController(episodes_nav_host_fragment.findNavController())
