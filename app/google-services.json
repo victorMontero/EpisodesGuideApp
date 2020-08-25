@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "508623582151",
+    "firebase_url": "https://episodesguideapp.firebaseio.com",
+    "project_id": "episodesguideapp",
+    "storage_bucket": "episodesguideapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508623582151:android:c2a8bcf95272ecb308dfe2",
+        "android_client_info": {
+          "package_name": "com.android.episodesguideapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508623582151-gk5rojndv5u5h0ngoucpordtk7qm491j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.episodesguideapp",
+            "certificate_hash": "893a5ad644afa59d09569123ad9a7909023f0860"
+          }
+        },
+        {
+          "client_id": "508623582151-3s276bf54cdi8a8m762qd8j13kpprojs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuGsu9N-ZIjTpJZLr93edyzmrpNXHg2So"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508623582151-3s276bf54cdi8a8m762qd8j13kpprojs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

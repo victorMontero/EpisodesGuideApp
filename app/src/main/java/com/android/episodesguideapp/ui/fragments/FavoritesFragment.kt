@@ -1,6 +1,10 @@
 package com.android.episodesguideapp.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -12,7 +16,9 @@ import com.android.episodesguideapp.R
 import com.android.episodesguideapp.adapters.EpisodeAdapter
 import com.android.episodesguideapp.ui.EpisodeViewModel
 import com.android.episodesguideapp.ui.MainActivity
+import com.android.episodesguideapp.ui.activities.LoginActivity
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_episodes.*
 import kotlinx.android.synthetic.main.fragment_favorites.*
 
@@ -21,11 +27,16 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
     lateinit var viewModel: EpisodeViewModel
     lateinit var episodeAdapter: EpisodeAdapter
 
+    private var mAuth: FirebaseAuth? = null
+
     val TAG = "FavoritesFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
+
+        mAuth = FirebaseAuth.getInstance()
+        setHasOptionsMenu(true)
         setupRecyclerView()
 
         episodeAdapter.setOnItemClickListener {
@@ -79,5 +90,22 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
             adapter = episodeAdapter
             layoutManager = LinearLayoutManager(activity)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.log_out_button ->{
+                mAuth!!.signOut()
+                val intent = Intent(activity, LoginActivity::class.java)
+                requireActivity().startActivity(intent)
+                return true
+            }
+        }
+        return false
     }
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.activities.CreateUserActivity">
+
+    <EditText
+        android:id="@+id/edit_text_name_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="first name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edit_text_last_name_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="last name"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_name_create"
+        app:layout_constraintStart_toStartOf="@id/edit_text_name_create"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_name_create"/>
+
+    <EditText
+    android:id="@+id/edit_text_email_create"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:hint="email"
+    app:layout_constraintEnd_toEndOf="@id/edit_text_last_name_create"
+    app:layout_constraintStart_toStartOf="@id/edit_text_last_name_create"
+    app:layout_constraintTop_toBottomOf="@id/edit_text_last_name_create"/>
+
+    <EditText
+        android:id="@+id/edit_text_password_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="email"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_email_create"
+        app:layout_constraintStart_toStartOf="@id/edit_text_email_create"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_email_create"/>
+
+    <Button
+        android:id="@+id/button_confirm_create"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="create user"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_password_create"
+        app:layout_constraintStart_toStartOf="@id/edit_text_password_create"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_password_create"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
