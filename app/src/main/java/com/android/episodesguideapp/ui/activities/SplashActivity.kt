@@ -11,7 +11,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        logo_ricky_morty_btn.setOnClickListener{
+        if (supportActionBar != null)
+            supportActionBar?.hide()
+
+        img_ricky_morty_splash.setOnClickListener{
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }

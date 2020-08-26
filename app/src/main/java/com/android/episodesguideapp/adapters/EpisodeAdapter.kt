@@ -47,8 +47,8 @@ class EpisodeAdapter : RecyclerView.Adapter<EpisodeAdapter.EpisodeViewHolder>() 
         holder.itemView.apply {
             Glide.with(this).load(episode.image.original).into(item_image_episode)
             item_episode_name.text = episode.name
-            item_season.text = episode.season.toString()
-            item_airdate.text = episode.airdate
+            item_season.text = "Season ${episode.season}"
+            item_airdate.text = "Air date: ${episode.airdate}"
 
             setOnClickListener {
                 onItemClickListener?.let { it(episode) }

@@ -10,6 +10,7 @@
         android:id="@+id/frame_layout_main_activity"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="#F0F8E2"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -32,8 +33,10 @@
         android:layout_height="56dp"
         android:id="@+id/bottom_navigation_view"
         app:menu="@menu/bottom_navigation_menu"
+        android:theme="@style/BottomNavigationTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"/>
 

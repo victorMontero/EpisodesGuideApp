@@ -32,6 +32,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        if (supportActionBar != null)
+            supportActionBar?.hide()
+
         setUpFields()
     }
 

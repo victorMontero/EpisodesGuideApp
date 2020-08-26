@@ -42,6 +42,9 @@ class CreateUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_user)
 
+        if (supportActionBar != null)
+            supportActionBar?.hide()
+
         initialise()
     }
 
