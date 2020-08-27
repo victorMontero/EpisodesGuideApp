@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#0F2027</color>
     <color name="colorAccent">#0F2027</color>
     <color name="green_light">#b7d485</color>
+
+    <color name="dark_purple">#4F2991</color>
 </resources>

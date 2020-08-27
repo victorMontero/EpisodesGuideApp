@@ -5,13 +5,13 @@
         android:id="@+id/episodesFragment"
         android:icon="@drawable/ic_episodes_white"
         android:iconTint="@color/colorAccent"
-        android:title="episodes"/>
+        android:title="all episodes"/>
 
 
     <item
         android:id="@+id/favoritesFragment"
-        android:icon="@drawable/ic_favorites_final"
+        android:icon="@drawable/ic_eye_white"
         android:iconTint="@color/colorAccent"
-        android:title="favorites"/>
+        android:title="watched"/>
 
 </menu>

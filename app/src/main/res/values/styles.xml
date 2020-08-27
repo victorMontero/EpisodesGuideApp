@@ -5,11 +5,21 @@
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/green_light</item>
+
+        <item name="actionOverflowButtonStyle">@style/DotsDarkTheme</item>
+
     </style>
 
     <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/green_light</item>
         <item name="android:textColorSecondary">@color/colorPrimary</item>
     </style>
+
+    <style name="DotsDarkTheme" parent="@style/Widget.AppCompat.ActionButton.Overflow" >
+        <item name="android:tint">@color/green_light</item>
+
+
+    </style>
+
 
 </resources>
