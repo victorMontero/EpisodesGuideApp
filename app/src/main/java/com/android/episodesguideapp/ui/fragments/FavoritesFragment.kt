@@ -2,10 +2,12 @@ package com.android.episodesguideapp.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -21,6 +23,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_episodes.*
 import kotlinx.android.synthetic.main.fragment_favorites.*
+import kotlinx.android.synthetic.main.item_episode_preview.*
 
 class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
 
@@ -68,6 +71,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
                 Snackbar.make(view, "great morty", Snackbar.LENGTH_LONG).apply {
                     setAction("undo"){
                         viewModel.saveEpisode(episode)
+
                     }
                     show()
                 }

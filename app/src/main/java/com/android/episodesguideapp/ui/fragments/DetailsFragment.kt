@@ -13,6 +13,7 @@ import com.android.episodesguideapp.ui.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_details.*
 import kotlinx.android.synthetic.main.fragment_episodes.*
+import kotlinx.android.synthetic.main.item_episode_preview.*
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 
