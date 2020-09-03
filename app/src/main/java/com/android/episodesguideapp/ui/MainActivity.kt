@@ -2,10 +2,7 @@ package com.android.episodesguideapp.ui
 
 import android.os.Bundle
 import android.text.Html
-import android.view.View
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -23,13 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar?.title = Html.fromHtml("<font color='#b7d485'>"+getText(R.string.app_name)+"</font>")
+        supportActionBar?.title =
+            Html.fromHtml("<font color='#b7d485'>" + getText(R.string.app_name) + "</font>")
 
 
         val episodeRepository = EpisodeRepository(EpisodeDatabase(this))
         val viewModelProviderFactory = EpisodeViewModelProviderFactory(application,
             episodeRepository)
-        viewModel = ViewModelProvider(this, viewModelProviderFactory).get(EpisodeViewModel::class.java)
+        viewModel =
+            ViewModelProvider(this, viewModelProviderFactory).get(EpisodeViewModel::class.java)
 
         bottom_navigation_view.setupWithNavController(episodes_nav_host_fragment.findNavController())
     }

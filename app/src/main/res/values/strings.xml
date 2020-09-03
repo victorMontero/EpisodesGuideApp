@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Episodes Guide </string>
+    <string name="text_login">welcome. login or register, it\'s free!</string>
+    <string name="text_forgot">forgot your password?</string>
+    <string name="text_create">create a new account.</string>
+    <string name="text_forgot_activity">we\'ll send you an email \n to you recover you password.</string>
+    <string name="text_create_activity">create a new user.</string>
+    <string name="text_first_name">first name</string>
+    <string name="text_last_name">last name</string>
+    <string name="text_email">email</string>
+    <string name="text_password">password</string>
+    <string name="button_create_text">create user</string>
 </resources>
