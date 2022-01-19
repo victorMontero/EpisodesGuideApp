@@ -1,0 +1,23 @@
+
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+o
+?app/src/main/java/com/android/episodesguideapp/util/Resource.kt,f/d/fd1a278794cace8cd9bc4e9d177332b3e750a8bd
+q
+Aapp/src/main/java/com/android/episodesguideapp/api/EpisodesAPI.kt,6/9/69eea37b310283d19f9cea6903d14e6f394dc3d1
+x
+Happ/src/main/java/com/android/episodesguideapp/models/EpisodeResponse.kt,f/f/ff14ebbf8650e408fa7f9083afcde0ea44a35f20
+p
+@app/src/main/java/com/android/episodesguideapp/models/Episode.kt,d/1/d13def4ffe7b0069fa4c411d52b938b8921f0c34
+n
+>app/src/main/java/com/android/episodesguideapp/models/Image.kt,3/c/3c8b7ed5dbfaca9c56581905e30486bab0ef395e
+v
+Fapp/src/main/java/com/android/episodesguideapp/api/RetrofitInstance.kt,4/d/4d4e40f129d725d0732049bab3aaa5f0c07f45c8
+~
+Napp/src/main/java/com/android/episodesguideapp/repository/EpisodeRepository.kt,6/c/6c478b7580f74e1fa63f2b23502276e959b04331
+p
+@app/src/main/java/com/android/episodesguideapp/util/Constants.kt,5/f/5f5dfc25c9b967cd45f4e88bec8a9176be867275
+u
+Eapp/src/main/java/com/android/episodesguideapp/EpisodesApplication.kt,8/3/8317f1d2f6b91da0953771d3d1288fb21ad49ebf
+y
+Iapp/src/main/java/com/android/episodesguideapp/adapters/EpisodeAdapter.kt,2/e/2ee72d49e02f166d30c2ac9162a94e4def853eb9

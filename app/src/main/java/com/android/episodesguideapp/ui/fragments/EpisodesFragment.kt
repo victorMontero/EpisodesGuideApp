@@ -2,7 +2,6 @@ package com.android.episodesguideapp.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -10,9 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.episodesguideapp.R
 import com.android.episodesguideapp.adapters.EpisodeAdapter
@@ -22,6 +19,7 @@ import com.android.episodesguideapp.ui.activities.LoginActivity
 import com.android.episodesguideapp.util.Resource
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_episodes.*
+
 
 class EpisodesFragment : Fragment(R.layout.fragment_episodes) {
 
@@ -48,11 +46,15 @@ class EpisodesFragment : Fragment(R.layout.fragment_episodes) {
                 R.id.action_episodesFragment_to_detailsFragment,
                 bundle
             )
+//            startActivity(
+//                FlutterActivity.createDefaultIntent(this.requireContext())
+//            )
+
 
         }
 
-        viewModel.episodes.observe(viewLifecycleOwner, Observer {response ->
-            when(response){
+        viewModel.episodes.observe(viewLifecycleOwner, Observer { response ->
+            when (response) {
                 is Resource.Success -> {
                     hideProgressBar()
                     response.data?.let { episodeResponse ->
@@ -62,11 +64,12 @@ class EpisodesFragment : Fragment(R.layout.fragment_episodes) {
                 is Resource.Error -> {
                     hideProgressBar()
                     response.message?.let { message ->
-                        Toast.makeText(activity, "an error occoured: $message", Toast.LENGTH_LONG).show()
+                        Toast.makeText(activity, "an error occoured: $message", Toast.LENGTH_LONG)
+                            .show()
 
                     }
                 }
-                is Resource.Loading ->{
+                is Resource.Loading -> {
                     showProgressBar()
                 }
             }
@@ -81,7 +84,7 @@ class EpisodesFragment : Fragment(R.layout.fragment_episodes) {
         progress_bar_fragment_episodes.visibility = View.VISIBLE
     }
 
-    private fun setupRecyclerView(){
+    private fun setupRecyclerView() {
         episodeAdapter = EpisodeAdapter()
         recycler_view_episodes_fragment.apply {
             adapter = episodeAdapter
@@ -95,8 +98,8 @@ class EpisodesFragment : Fragment(R.layout.fragment_episodes) {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.log_out_button ->{
+        when (item.itemId) {
+            R.id.log_out_button -> {
                 mAuth!!.signOut()
                 val intent = Intent(activity, LoginActivity::class.java)
                 requireActivity().startActivity(intent)
